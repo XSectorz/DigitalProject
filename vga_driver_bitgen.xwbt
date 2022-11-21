@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Xsectorz\ISE\DigitalFinalProject\vga_driver.ncd
+OUTFILE=D:\Xsectorz\ISE\DigitalFinalProject\vga_driver.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=D:\Xsectorz\ISE\DigitalFinalProject
+LICENSE=WebPack
+USER_INFO=__0_0_0
