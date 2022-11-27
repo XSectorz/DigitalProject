@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Nov 22 03:32:51 2022
+Mon Nov 28 02:15:45 2022
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -27,14 +27,14 @@ Pinout by Pin Number:
 |P5        |RGB<0>          |IOB      |IO_L52N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P6        |                |IOBM     |IO_L52P_3                 |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |P7        |RGB<1>          |IOB      |IO_L51N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P8        |                |IOBM     |IO_L51P_3                 |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|P8        |Player2_Button_R|IOB      |IO_L51P_3                 |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P9        |RGB<2>          |IOB      |IO_L50N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P10       |                |IOBM     |IO_L50P_3                 |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|P10       |Player2_Button_L|IOB      |IO_L50P_3                 |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P11       |RGB<3>          |IOB      |IO_L49N_3                 |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P12       |                |IOBM     |IO_L49P_3                 |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|P12       |Player1_Button_R|IOB      |IO_L49P_3                 |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P13       |                |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P14       |RGB<4>          |IOB      |IO_L44N_GCLK20_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P15       |                |IOBM     |IO_L44P_GCLK21_3          |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|P15       |Player1_Button_L|IOB      |IO_L44P_GCLK21_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P16       |RGB<5>          |IOB      |IO_L43N_GCLK22_IRDY2_3    |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P17       |VSYNC           |IOB      |IO_L43P_GCLK23_3          |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P18       |                |         |VCCO_3                    |         |           |3             |          |         |           |         |2.50     |          |           |                |
@@ -61,13 +61,13 @@ Pinout by Pin Number:
 |P39       |                |IOBM     |IO_L65P_INIT_B_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P40       |                |IOBS     |IO_L64N_D9_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P41       |                |IOBM     |IO_L64P_D8_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|P42       |                |         |VCCO_2                    |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|P42       |                |         |VCCO_2                    |         |           |2             |          |         |           |         |any******|          |           |                |
 |P43       |                |IOBS     |IO_L62N_D6_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P44       |                |IOBM     |IO_L62P_D5_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P45       |                |IOBS     |IO_L49N_D4_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P46       |                |IOBM     |IO_L49P_D3_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|P47       |Player1_Button_L|IOB      |IO_L48N_RDWR_B_VREF_2     |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|P48       |Player1_Button_R|IOB      |IO_L48P_D7_2              |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|P47       |                |IOBS     |IO_L48N_RDWR_B_VREF_2     |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|P48       |                |IOBM     |IO_L48P_D7_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P49       |                |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P50       |                |IOBS     |IO_L31N_GCLK30_D15_2      |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P51       |                |IOBM     |IO_L31P_GCLK31_D14_2      |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
@@ -82,11 +82,11 @@ Pinout by Pin Number:
 |P60       |                |IOBM     |IO_L13P_M1_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P61       |                |IOBS     |IO_L12N_D2_MISO3_2        |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P62       |                |IOBM     |IO_L12P_D1_MISO2_2        |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|P63       |                |         |VCCO_2                    |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|P63       |                |         |VCCO_2                    |         |           |2             |          |         |           |         |any******|          |           |                |
 |P64       |                |IOBS     |IO_L3N_MOSI_CSI_B_MISO0_2 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P65       |                |IOBM     |IO_L3P_D0_DIN_MISO_MISO1_2|UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P66       |                |IOBS     |IO_L2N_CMPMOSI_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|P67       |LED_TEST2       |IOB      |IO_L2P_CMPCLK_2           |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P67       |                |IOBM     |IO_L2P_CMPCLK_2           |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P68       |                |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P69       |                |IOBS     |IO_L1N_M0_CMPMISO_2       |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P70       |                |IOBM     |IO_L1P_CCLK_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
@@ -99,9 +99,9 @@ Pinout by Pin Number:
 |P77       |                |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P78       |                |IOBS     |IO_L47N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P79       |                |IOBM     |IO_L47P_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|P80       |LED_TEST        |IOB      |IO_L46N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P81       |LED_L           |IOB      |IO_L46P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
-|P82       |LED_R           |IOB      |IO_L45N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
+|P80       |                |IOBS     |IO_L46N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P81       |LED_OUT_X_MINUS |IOB      |IO_L46P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P82       |LED_OUT_X       |IOB      |IO_L45N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P83       |BUZZER          |IOB      |IO_L45P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P84       |                |IOBS     |IO_L43N_GCLK4_1           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P85       |                |IOBM     |IO_L43P_GCLK5_1           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |

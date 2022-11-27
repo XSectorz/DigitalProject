@@ -37,9 +37,11 @@ Setup/Hold to clock CLK
                 |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ----------------+------------+------------+------------+------------+------------------+--------+
-Player1_Button_L|    3.265(R)|      SLOW  |   -0.463(R)|      SLOW  |CLK_BUFGP         |   0.000|
-Player1_Button_R|    3.608(R)|      SLOW  |   -0.308(R)|      SLOW  |CLK_BUFGP         |   0.000|
-RST             |    2.094(R)|      SLOW  |    0.403(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player1_Button_L|    5.306(R)|      SLOW  |   -0.925(R)|      FAST  |CLK_BUFGP         |   0.000|
+Player1_Button_R|    3.452(R)|      SLOW  |   -0.572(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player2_Button_L|    3.218(R)|      SLOW  |    0.140(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player2_Button_R|    2.817(R)|      SLOW  |    0.076(R)|      SLOW  |CLK_BUFGP         |   0.000|
+RST             |    2.684(R)|      SLOW  |    0.182(R)|      SLOW  |CLK_BUFGP         |   0.000|
 ----------------+------------+------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -47,15 +49,15 @@ Clock CLK to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-BUZZER      |         7.667(R)|      SLOW  |         4.036(R)|      FAST  |CLK_BUFGP         |   0.000|
-HSYNC       |         7.009(R)|      SLOW  |         3.560(R)|      FAST  |CLK_BUFGP         |   0.000|
-LED_L       |         6.277(R)|      SLOW  |         2.881(R)|      FAST  |CLK_BUFGP         |   0.000|
-LED_R       |         6.281(R)|      SLOW  |         2.885(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<1>      |         8.747(R)|      SLOW  |         4.623(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<5>      |         7.489(R)|      SLOW  |         3.879(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<6>      |         7.162(R)|      SLOW  |         3.627(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<7>      |         7.107(R)|      SLOW  |         3.663(R)|      FAST  |CLK_BUFGP         |   0.000|
-VSYNC       |         7.315(R)|      SLOW  |         3.752(R)|      FAST  |CLK_BUFGP         |   0.000|
+HSYNC       |         6.597(R)|      SLOW  |         3.308(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<1>      |         8.167(R)|      SLOW  |         4.266(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<2>      |         8.527(R)|      SLOW  |         4.466(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<3>      |         8.364(R)|      SLOW  |         4.367(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<4>      |         7.148(R)|      SLOW  |         3.647(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<5>      |         7.396(R)|      SLOW  |         3.801(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<6>      |         7.287(R)|      SLOW  |         3.761(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<7>      |         7.492(R)|      SLOW  |         3.869(R)|      FAST  |CLK_BUFGP         |   0.000|
+VSYNC       |         7.717(R)|      SLOW  |         4.000(R)|      FAST  |CLK_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -63,11 +65,19 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.043|         |         |         |
+CLK            |    8.350|         |         |         |
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+----------------+---------------+---------+
+Source Pad      |Destination Pad|  Delay  |
+----------------+---------------+---------+
+Player1_Button_L|LED_OUT_X      |    7.135|
+Player1_Button_R|LED_OUT_X_MINUS|    9.013|
+----------------+---------------+---------+
 
-Analysis completed Tue Nov 22 03:32:53 2022 
+
+Analysis completed Mon Nov 28 02:15:48 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -11,10 +11,10 @@ NET "RGB[2]" LOC = "P9";
 NET "RGB[1]" LOC = "P7";
 NET "RGB[0]" LOC = "P5";
 
-NET "Player1_Button_L" LOC = "P47";
-NET "Player1_Button_R" LOC = "P48";
-NET "LED_L" LOC = "P81";
-NET "LED_R" LOC = "P82";
-NET "LED_TEST" LOC = "P80";
-NET "LED_TEST2" LOC = "P67";
+NET "Player1_Button_L" LOC = "P15";
+NET "Player1_Button_R" LOC = "P12";
+NET "Player2_Button_L" LOC = "P10";
+NET "Player2_Button_R" LOC = "P8";
+NET "LED_OUT_X" LOC = "P82";
+NET "LED_OUT_X_MINUS" LOC = "P81";
 NET "BUZZER" LOC = "P83";

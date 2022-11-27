@@ -171,3 +171,326 @@ map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
 bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
+xst -intstyle ise -ifn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.xst" -ofn "D:/Xsectorz/ISE/DigitalFinalProject/vga_driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VGADriver.ucf -p xc6slx9-tqg144-3 vga_driver.ngc vga_driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vga_driver_map.ncd vga_driver.ngd vga_driver.pcf 
+par -w -intstyle ise -ol high -mt off vga_driver_map.ncd vga_driver.ncd vga_driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr vga_driver.pcf -ucf VGADriver.ucf 
+bitgen -intstyle ise -f vga_driver.ut vga_driver.ncd 
