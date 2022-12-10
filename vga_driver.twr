@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 D:\Xsectorz\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr
-vga_driver.pcf -ucf VGADriver.ucf
+vga_driver.pcf -ucf PinDriver.ucf
 
 Design file:              vga_driver.ncd
 Physical constraint file: vga_driver.pcf
@@ -37,11 +37,11 @@ Setup/Hold to clock CLK
                 |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ----------------+------------+------------+------------+------------+------------------+--------+
-Player1_Button_L|    5.306(R)|      SLOW  |   -0.925(R)|      FAST  |CLK_BUFGP         |   0.000|
-Player1_Button_R|    3.452(R)|      SLOW  |   -0.572(R)|      SLOW  |CLK_BUFGP         |   0.000|
-Player2_Button_L|    3.218(R)|      SLOW  |    0.140(R)|      SLOW  |CLK_BUFGP         |   0.000|
-Player2_Button_R|    2.817(R)|      SLOW  |    0.076(R)|      SLOW  |CLK_BUFGP         |   0.000|
-RST             |    2.684(R)|      SLOW  |    0.182(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player1_Button_L|    3.962(R)|      SLOW  |   -1.281(R)|      FAST  |CLK_BUFGP         |   0.000|
+Player1_Button_R|    4.993(R)|      SLOW  |   -1.011(R)|      FAST  |CLK_BUFGP         |   0.000|
+Player2_Button_L|    4.722(R)|      SLOW  |    0.117(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player2_Button_R|    4.467(R)|      SLOW  |   -0.027(R)|      SLOW  |CLK_BUFGP         |   0.000|
+RST             |    3.578(R)|      SLOW  |    0.391(R)|      SLOW  |CLK_BUFGP         |   0.000|
 ----------------+------------+------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -49,42 +49,55 @@ Clock CLK to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-HSYNC       |         6.597(R)|      SLOW  |         3.308(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<1>      |         8.167(R)|      SLOW  |         4.266(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<2>      |         8.527(R)|      SLOW  |         4.466(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<3>      |         8.364(R)|      SLOW  |         4.367(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<4>      |         7.148(R)|      SLOW  |         3.647(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<5>      |         7.396(R)|      SLOW  |         3.801(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<6>      |         7.287(R)|      SLOW  |         3.761(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<7>      |         7.492(R)|      SLOW  |         3.869(R)|      FAST  |CLK_BUFGP         |   0.000|
-VSYNC       |         7.717(R)|      SLOW  |         4.000(R)|      FAST  |CLK_BUFGP         |   0.000|
+HSYNC       |         6.961(R)|      SLOW  |         3.506(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<1>      |         8.268(R)|      SLOW  |         4.330(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<2>      |         8.569(R)|      SLOW  |         4.514(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<3>      |         8.405(R)|      SLOW  |         4.414(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<4>      |         7.190(R)|      SLOW  |         3.695(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<5>      |         7.249(R)|      SLOW  |         3.730(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<6>      |         7.395(R)|      SLOW  |         3.824(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<7>      |         7.190(R)|      SLOW  |         3.716(R)|      FAST  |CLK_BUFGP         |   0.000|
+VSYNC       |         8.228(R)|      SLOW  |         4.333(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore1|         8.524(R)|      SLOW  |         4.523(R)|      FAST  |CLK_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock BTN_RESTART
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BTN_RESTART    |         |         |    0.597|    0.597|
+BTN_START      |         |         |    0.587|    0.587|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock BTN_START
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BTN_RESTART    |         |         |    0.606|    0.606|
+BTN_START      |         |         |    0.596|    0.596|
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    8.350|         |         |         |
+BTN_RESTART    |         |   10.170|         |         |
+BTN_START      |         |   10.170|         |         |
+CLK            |   10.740|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
-----------------+---------------+---------+
-Source Pad      |Destination Pad|  Delay  |
-----------------+---------------+---------+
-Player1_Button_L|LED_OUT_X      |    7.135|
-Player1_Button_R|LED_OUT_X_MINUS|    9.013|
-----------------+---------------+---------+
 
-
-Analysis completed Mon Nov 28 02:15:48 2022 
+Analysis completed Sun Dec 11 03:06:06 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4573 MB
+Peak Memory Usage: 4590 MB
 
 
 

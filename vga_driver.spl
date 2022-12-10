@@ -1,0 +1,15 @@
+[Inputs]
+CLK
+RST
+Player1_Button_L
+Player1_Button_R
+Player2_Button_L
+Player2_Button_R
+[Outputs]
+HSYNC
+VSYNC
+LED_OUT_X
+LED_OUT_X_MINUS
+BUZZER
+=RGB[7:0]=
+[BiDir]

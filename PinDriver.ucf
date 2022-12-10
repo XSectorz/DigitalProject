@@ -1,0 +1,21 @@
+NET "CLK" LOC = "P123";
+NET "RST" LOC = "P24";
+NET "HSYNC" LOC = "P22";
+NET "VSYNC" LOC = "P17";
+NET "RGB[7]" LOC = "P23";
+NET "RGB[6]" LOC = "P21";
+NET "RGB[5]" LOC = "P16";
+NET "RGB[4]" LOC = "P14";
+NET "RGB[3]" LOC = "P11";
+NET "RGB[2]" LOC = "P9";
+NET "RGB[1]" LOC = "P7";
+NET "RGB[0]" LOC = "P5";
+
+NET "Player1_Button_L" LOC = "P15";
+NET "Player1_Button_R" LOC = "P12";
+NET "Player2_Button_L" LOC = "P10";
+NET "Player2_Button_R" LOC = "P8";
+NET "outputScore1" LOC = "P6";
+NET "BTN_START" LOC = "P47";
+NET "BTN_RESTART" LOC = "P48";
+NET "BUZZER" LOC = "P83";

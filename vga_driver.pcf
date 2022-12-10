@@ -1,11 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Nov 28 02:15:40 2022
+// Written by: Map P.20131013 on Sun Dec 11 03:05:57 2022
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "CLK" LOCATE = SITE "P123" LEVEL 1;
 COMP "RST" LOCATE = SITE "P24" LEVEL 1;
-COMP "LED_OUT_X_MINUS" LOCATE = SITE "P81" LEVEL 1;
+COMP "outputScore1" LOCATE = SITE "P6" LEVEL 1;
+COMP "BTN_RESTART" LOCATE = SITE "P48" LEVEL 1;
 COMP "VSYNC" LOCATE = SITE "P17" LEVEL 1;
 COMP "Player1_Button_L" LOCATE = SITE "P15" LEVEL 1;
 COMP "Player1_Button_R" LOCATE = SITE "P12" LEVEL 1;
@@ -20,7 +21,7 @@ COMP "RGB<5>" LOCATE = SITE "P16" LEVEL 1;
 COMP "RGB<6>" LOCATE = SITE "P21" LEVEL 1;
 COMP "RGB<7>" LOCATE = SITE "P23" LEVEL 1;
 COMP "BUZZER" LOCATE = SITE "P83" LEVEL 1;
-COMP "LED_OUT_X" LOCATE = SITE "P82" LEVEL 1;
+COMP "BTN_START" LOCATE = SITE "P47" LEVEL 1;
 COMP "HSYNC" LOCATE = SITE "P22" LEVEL 1;
 SCHEMATIC END;
 
