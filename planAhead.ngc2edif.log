@@ -1,0 +1,36 @@
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design vga_driver.ngc ...
+WARNING:NetListWriters:298 - No output is written to vga_driver.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus GND_6_o_GND_6_o_mux_299_OUT[6 : 1] on
+   block vga_driver is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   Mmux_Ball_X1[31]_Ball_X1[31]_mux_175_OUT_rs_A[7 : 1] on block vga_driver is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_n0708_lut[2 : 0] on block
+   vga_driver is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Madd_Ball_Y1[31]_GND_6_o_add_274_OUT_lut[3 : 1] on block vga_driver is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_n0714_lut[5 : 0] on block
+   vga_driver is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_n0700_lut[5 : 0] on block
+   vga_driver is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Msub_P1_X1[31]_GND_6_o_sub_76_OUT_lut[10
+   : 2] on block vga_driver is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_n0706_lut[3 : 1] on block
+   vga_driver is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_n0720_lut[3 : 1] on block
+   vga_driver is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Msub_P2_X1[31]_GND_6_o_sub_51_OUT_lut[10
+   : 2] on block vga_driver is not reconstructed, because there are some missing
+   bus signals.
+  finished :Prep
+Writing EDIF netlist file vga_driver.edif ...
+ngc2edif: Total memory usage is 82416 kilobytes
+

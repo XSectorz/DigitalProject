@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 D:\Xsectorz\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
 -n 3 -fastpaths -xml vga_driver.twx vga_driver.ncd -o vga_driver.twr
-vga_driver.pcf -ucf PinDriver.ucf
+vga_driver.pcf -ucf VGAInput.ucf
 
 Design file:              vga_driver.ncd
 Physical constraint file: vga_driver.pcf
@@ -37,37 +37,72 @@ Setup/Hold to clock CLK
                 |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ----------------+------------+------------+------------+------------+------------------+--------+
-Player1_Button_L|    3.962(R)|      SLOW  |   -1.281(R)|      FAST  |CLK_BUFGP         |   0.000|
-Player1_Button_R|    4.993(R)|      SLOW  |   -1.011(R)|      FAST  |CLK_BUFGP         |   0.000|
-Player2_Button_L|    4.722(R)|      SLOW  |    0.117(R)|      SLOW  |CLK_BUFGP         |   0.000|
-Player2_Button_R|    4.467(R)|      SLOW  |   -0.027(R)|      SLOW  |CLK_BUFGP         |   0.000|
-RST             |    3.578(R)|      SLOW  |    0.391(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player1_Button_L|    3.599(R)|      SLOW  |   -0.651(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player1_Button_R|    2.398(R)|      SLOW  |   -0.137(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player2_Button_L|    3.126(R)|      SLOW  |   -0.250(R)|      SLOW  |CLK_BUFGP         |   0.000|
+Player2_Button_R|    2.794(R)|      SLOW  |   -0.081(R)|      SLOW  |CLK_BUFGP         |   0.000|
+RST             |    2.313(R)|      SLOW  |   -0.022(R)|      SLOW  |CLK_BUFGP         |   0.000|
 ----------------+------------+------------+------------+------------+------------------+--------+
 
+Clock BTN_RESTART to Pad
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                              | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)             | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+ISGAMESTART |        13.426(F)|      SLOW  |         8.207(F)|      FAST  |BTN_RESTART_BTN_START_AND_51_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+
+Clock BTN_START to Pad
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                              | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)             | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+ISGAMESTART |        13.738(F)|      SLOW  |         8.317(F)|      FAST  |BTN_RESTART_BTN_START_AND_51_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+
 Clock CLK to Pad
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-HSYNC       |         6.961(R)|      SLOW  |         3.506(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<1>      |         8.268(R)|      SLOW  |         4.330(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<2>      |         8.569(R)|      SLOW  |         4.514(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<3>      |         8.405(R)|      SLOW  |         4.414(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<4>      |         7.190(R)|      SLOW  |         3.695(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<5>      |         7.249(R)|      SLOW  |         3.730(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<6>      |         7.395(R)|      SLOW  |         3.824(R)|      FAST  |CLK_BUFGP         |   0.000|
-RGB<7>      |         7.190(R)|      SLOW  |         3.716(R)|      FAST  |CLK_BUFGP         |   0.000|
-VSYNC       |         8.228(R)|      SLOW  |         4.333(R)|      FAST  |CLK_BUFGP         |   0.000|
-outputScore1|         8.524(R)|      SLOW  |         4.523(R)|      FAST  |CLK_BUFGP         |   0.000|
-------------+-----------------+------------+-----------------+------------+------------------+--------+
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+BUZZER         |         7.117(R)|      SLOW  |         3.586(R)|      FAST  |CLK_BUFGP         |   0.000|
+HSYNC          |         7.188(R)|      SLOW  |         3.664(R)|      FAST  |CLK_BUFGP         |   0.000|
+ISGAMESTART    |        10.075(R)|      SLOW  |         5.664(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<1>         |         7.812(R)|      SLOW  |         4.024(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<2>         |         8.122(R)|      SLOW  |         4.215(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<3>         |         7.959(R)|      SLOW  |         4.116(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<4>         |         6.779(R)|      SLOW  |         3.446(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<5>         |         7.064(R)|      SLOW  |         3.621(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<6>         |         7.210(R)|      SLOW  |         3.697(R)|      FAST  |CLK_BUFGP         |   0.000|
+RGB<7>         |         7.371(R)|      SLOW  |         3.794(R)|      FAST  |CLK_BUFGP         |   0.000|
+VSYNC          |         7.239(R)|      SLOW  |         3.693(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore1<0>|         8.107(R)|      SLOW  |         4.319(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore1<1>|         8.608(R)|      SLOW  |         4.729(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore1<2>|         8.204(R)|      SLOW  |         4.391(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore1<3>|         8.034(R)|      SLOW  |         4.233(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore2<0>|         7.774(R)|      SLOW  |         4.129(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore2<1>|         7.961(R)|      SLOW  |         4.217(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore2<2>|         7.445(R)|      SLOW  |         3.863(R)|      FAST  |CLK_BUFGP         |   0.000|
+outputScore2<3>|         7.439(R)|      SLOW  |         3.837(R)|      FAST  |CLK_BUFGP         |   0.000|
+---------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock FORCESTOP to Pad
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                              | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)             | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
+ISGAMESTART |        13.657(F)|      SLOW  |         8.335(F)|      FAST  |BTN_RESTART_BTN_START_AND_51_o|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------------------+--------+
 
 Clock to Setup on destination clock BTN_RESTART
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-BTN_RESTART    |         |         |    0.597|    0.597|
-BTN_START      |         |         |    0.587|    0.587|
+BTN_RESTART    |         |         |    0.911|    2.414|
+BTN_START      |         |         |    1.223|    2.414|
+CLK            |         |         |    0.623|         |
+FORCESTOP      |         |         |    1.142|    2.414|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock BTN_START
@@ -75,8 +110,10 @@ Clock to Setup on destination clock BTN_START
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-BTN_RESTART    |         |         |    0.606|    0.606|
-BTN_START      |         |         |    0.596|    0.596|
+BTN_RESTART    |         |         |    0.622|    2.414|
+BTN_START      |         |         |    0.934|    2.414|
+CLK            |         |         |    0.623|         |
+FORCESTOP      |         |         |    0.853|    2.414|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock CLK
@@ -84,13 +121,32 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-BTN_RESTART    |         |   10.170|         |         |
-BTN_START      |         |   10.170|         |         |
-CLK            |   10.740|         |         |         |
+BTN_RESTART    |    8.691|   11.491|         |         |
+BTN_START      |    9.892|   11.491|         |         |
+CLK            |   11.028|         |         |         |
+FORCESTOP      |    7.843|   11.491|         |         |
 ---------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock FORCESTOP
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+BTN_RESTART    |         |         |    0.695|    2.414|
+BTN_START      |         |         |    1.007|    2.414|
+CLK            |         |         |    0.623|         |
+FORCESTOP      |         |         |    0.926|    2.414|
+---------------+---------+---------+---------+---------+
 
-Analysis completed Sun Dec 11 03:06:06 2022 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+BTN_START      |RESTART        |   11.411|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Dec 13 01:06:06 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
