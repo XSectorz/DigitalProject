@@ -30,6 +30,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity vga_driver is
   Port ( CLK : in  STD_LOGIC;
            RST : in  STD_LOGIC;
+           FORCESTOP : in  STD_LOGIC;
+           RESTART : out  STD_LOGIC;
+           ISGAMESTART : out  STD_LOGIC;
            HSYNC : out  STD_LOGIC;
            VSYNC : out  STD_LOGIC;
            BTN_START : in  STD_LOGIC;
@@ -39,7 +42,8 @@ entity vga_driver is
 			  Player2_Button_L : in STD_LOGIC;
 			  Player2_Button_R : in STD_LOGIC;
 			  BUZZER : out STD_LOGIC;
-			  outputScore1 : out STD_LOGIC;
+			  outputScore1 : out STD_LOGIC_VECTOR (3 downto 0);
+			  outputScore2 : out STD_LOGIC_VECTOR (3 downto 0);
            RGB : out  STD_LOGIC_VECTOR (7 downto 0));	  
 end vga_driver;
 
@@ -47,6 +51,11 @@ architecture Behavioral of vga_driver is
 		
 	signal clk25 : std_logic := '0';
 	signal clkDiv1M : std_logic := '0';
+	signal clkDiv50K : std_logic := '0';
+	signal clkDiv20M: std_logic := '0';
+	
+	signal scoreP1 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+	signal scoreP2 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
 	
 	constant HD : integer := 449;  --  639   Horizontal Display (640)
 	constant HFP : integer := 20;         --   16   Right border (front porch)
@@ -96,8 +105,11 @@ architecture Behavioral of vga_driver is
 	signal rand_type : integer := 0;
 	signal rand_type2 : integer := 0;
 	signal clockCount : integer := 0;
+	signal clockCount50K : integer := 0;
+	signal bcdDigit : STD_LOGIC_VECTOR (3 downto 0) := "0000";
 	
 	signal gameStart : std_logic := '0';
+	
 begin
 
 	clk_div:process(CLK)
@@ -105,12 +117,14 @@ begin
 		clk25 <= CLK;
 	end process;
 	
-	gameProcess:process(BTN_START,BTN_RESTART)
+	clkD50K:process(CLK)
 	begin
-		if (BTN_START = '1' and BTN_RESTART = '0') then
-			gameStart <= '1';
-		elsif (BTN_RESTART = '1' and BTN_START = '0') then
-			gameStart <= '0';
+		if(clk25'event and clk25 = '1') then
+			clockCount50K <= clockCount50K + 1;
+			if clockCount50K = 50000 then
+				clkDiv50K <= NOT clkDiv50K;
+				clockCount50K <= 1;
+			end if;
 		end if;
 	end process;
 	
@@ -197,146 +211,169 @@ begin
 		end if;
 	end process;
 	
-	BallCollisionChecker:process(CLK)
+	gameProcessEvent:process(CLK,BTN_START,BTN_RESTART,FORCESTOP)
 	begin
-		if(clk25'event and clk25 = '1') then
+		outputScore1 <= scoreP1;	
+		outputScore2 <= scoreP2;
+		RESTART <= BTN_START;
+		ISGAMESTART <= gameStart;
 		
-			if (Sound_counter > 0) then
-				--BUZZER <= '1';
-				Sound_counter <= Sound_counter - 1;
-			else
-				BUZZER <= '0';
-			end if;
-				
-			if gameStart = '1' then
-				if ((Ball_X1+Ball_width >= P2_X1) and (Ball_X1+Ball_width <= (P2_X1+P2_WIDTH)) and (Ball_Y1+Ball_height = P2_Y)) then --Interact Player 2
-					Sound_counter <= Sound_counter_delay;
-					Ball_Direction_Y <= -1;
-					if ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P2_X1+(P2_X1+P2_WIDTH))/2)-10) then --fist half 
-						Ball_Direction_X <= -1;
-					elsif ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P2_X1+(P2_X1+P2_WIDTH))/2)+10) then
-						Ball_Direction_X <= 1;
-					else --middle	
-						Ball_Direction_X <= 0;
-					end if;
-					BallCollision <= BallCollision + 1;
-				elsif ((Ball_X1+Ball_width >= P1_X1) and (Ball_X1+Ball_width <= (P1_X1+P1_WIDTH)) and (Ball_Y1-2 = P1_Y)) then --Interact Player 1
-					Sound_counter <= Sound_counter_delay;
-					Ball_Direction_Y <= 1;
-					if ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P1_X1+(P1_X1+P1_WIDTH))/2)-10) then --fist half
-						Ball_Direction_X <= -1;
-					elsif ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P1_X1+(P1_X1+P1_WIDTH))/2)+10) then
-						Ball_Direction_X <= 1;
-					else
-						Ball_Direction_X <= 0;
-					end if;
-					BallCollision <= BallCollision + 1;
+		if FORCESTOP = '1' then
+			gameStart <= '0';
+		elsif (BTN_START = '1' and BTN_RESTART = '0' and gameStart = '0') then
+			gameStart <= '1';
+			scoreP1 <= "0000";
+			scoreP2 <= "0000";
+		elsif (BTN_RESTART = '1' and BTN_START = '0' and gameStart = '1') then
+			gameStart <= '0';
+			scoreP1 <= "0000";
+			scoreP2 <= "0000";
+		else
+			if(clk25'event and clk25 = '1') then
+				if (Sound_counter > 0) then
+					BUZZER <= '1';
+					Sound_counter <= Sound_counter - 1;
 				else
-					if (Ball_Y1+Ball_height >= 464) or (Ball_Y1 <= 29) then --Ball Out of Border
-						
-						if (Ball_Y1+Ball_height >= 464) then
-							--Player 2 lose send score to player 1
-							--output_p1 -> 1
-							outputScore1 <= '1';
-						else
-							--output_p1 -> 0
-							outputScore1 <= '0';
-						end if;
-						
-						if (Ball_Y1 <= 29) then
-							--Player 1 lose send score to player 2
-						end if;
-						
-						
-						if rand_type <= 26 then
-							Ball_X1 <= Ball_SpawnPosX+rand_num;
-						else
-							Ball_X1 <= Ball_SpawnPosX-rand_num;
-						end if;
-						
-						Ball_Y1 <= Ball_SpawnPosY;
-						
-						if rand_type <= 25 then
-							Ball_Direction_X <= -1*Ball_SpawnDirectionX;
-						else
-							Ball_Direction_X <= Ball_SpawnDirectionX;
-						end if;
-						
-						if rand_type2 >= 50 then
-							Ball_Direction_Y <= 1*Ball_SpawnDirectionY;
-						else
-							Ball_Direction_Y <= -1*Ball_SpawnDirectionY;
-						end if;
-						
-						Sound_counter <= Sound_counter_delay + 1000000;
-						Ball_Move_counter <= Ball_StartMoveCounter;
-						BallCollision <= 0;
-					elsif (Ball_X1 <= 47) then
-						if (Ball_Direction_Y = 1) then
-							Ball_Direction_X <= 1;
-							Ball_Direction_Y <= 1;
-						else
-							Ball_Direction_X <= 1;
-							Ball_Direction_Y <= -1;
-						BallCollision <= BallCollision + 1;
-						Sound_counter <= Sound_counter_delay;
-						end if;
-					elsif (Ball_X1+Ball_width >= HD-21) then
-						if (Ball_Direction_Y = -1) then
-							Ball_Direction_X <= -1;
-							Ball_Direction_Y <= -1;
-						else
-							Ball_Direction_X <= -1;
-							Ball_Direction_Y <= 1;
-						BallCollision <= BallCollision + 1;
-						Sound_counter <= Sound_counter_delay;
-						end if;
-					end if;
+					BUZZER <= '0';
 				end if;
 				
-				if(Ball_Move_counter <= 0) then
-					if (Ball_Direction_X = 1)then
-						Ball_X1 <= Ball_X1+1;
-					elsif Ball_Direction_X = -1 then
-						Ball_X1 <= Ball_X1-1;
+				if gameStart = '1' then
+					if ((Ball_X1+Ball_width >= P2_X1) and (Ball_X1+Ball_width <= (P2_X1+P2_WIDTH)) and (Ball_Y1+Ball_height = P2_Y)) then --Interact Player 2
+						Sound_counter <= Sound_counter_delay;
+						Ball_Direction_Y <= -1;
+						if ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P2_X1+(P2_X1+P2_WIDTH))/2)-10) then --fist half 
+							Ball_Direction_X <= -1;
+						elsif ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P2_X1+(P2_X1+P2_WIDTH))/2)+10) then
+							Ball_Direction_X <= 1;
+						else --middle	
+							Ball_Direction_X <= 0;
+						end if;
+						BallCollision <= BallCollision + 1;
+					elsif ((Ball_X1+Ball_width >= P1_X1) and (Ball_X1+Ball_width <= (P1_X1+P1_WIDTH)) and (Ball_Y1-2 = P1_Y)) then --Interact Player 1
+						Sound_counter <= Sound_counter_delay;
+						Ball_Direction_Y <= 1;
+						if ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P1_X1+(P1_X1+P1_WIDTH))/2)-10) then --fist half
+							Ball_Direction_X <= -1;
+						elsif ((Ball_X1+(Ball_X1+Ball_width))/2 <= ((P1_X1+(P1_X1+P1_WIDTH))/2)+10) then
+							Ball_Direction_X <= 1;
+						else
+							Ball_Direction_X <= 0;
+						end if;
+						BallCollision <= BallCollision + 1;
 					else
-						Ball_X1 <= Ball_X1;
-					end if;
-					if (Ball_Direction_Y = 1)then
-						Ball_Y1 <= Ball_Y1+2;
-					else
-						Ball_Y1 <= Ball_Y1-2;
-					end if;
-					if BallCollision <= 0 then
-						Ball_Move_counter <= Ball_StartMoveCounter;
-					else
-						Ball_Move_counter <= Ball_Move_counter_delay;
+						if (Ball_Y1+Ball_height >= 464) or (Ball_Y1 <= 29) then --Ball Out of Border
+							
+							if (Ball_Y1+Ball_height >= 464) then
+								--Player 2 lose send score to player 1
+								scoreP1 <= scoreP1 + 1;
+								if to_integer(unsigned(scoreP1)) = 15 then
+									gameStart <= '0';
+									scoreP1 <= "0000";
+									scoreP2 <= "0000";
+								end if;
+							end if;	
+							
+							if (Ball_Y1 <= 29) then
+								scoreP2 <= scoreP2 + 1;
+								if to_integer(unsigned(scoreP2)) = 15 then
+									gameStart <= '0';
+									scoreP1 <= "0000";
+									scoreP2 <= "0000";
+								end if;
+							end if;
+							
+							
+							if rand_type <= 26 then
+								Ball_X1 <= Ball_SpawnPosX+rand_num;
+							else
+								Ball_X1 <= Ball_SpawnPosX-rand_num;
+							end if;
+							
+							Ball_Y1 <= Ball_SpawnPosY;
+							
+							if rand_type <= 25 then
+								Ball_Direction_X <= -1*Ball_SpawnDirectionX;
+							else
+								Ball_Direction_X <= Ball_SpawnDirectionX;
+							end if;
+							
+							if rand_type2 >= 50 then
+								Ball_Direction_Y <= 1*Ball_SpawnDirectionY;
+							else
+								Ball_Direction_Y <= -1*Ball_SpawnDirectionY;
+							end if;
+							
+							Sound_counter <= Sound_counter_delay + 1000000;
+							Ball_Move_counter <= Ball_StartMoveCounter;
+							BallCollision <= 0;
+						elsif (Ball_X1 <= 47) then
+							if (Ball_Direction_Y = 1) then
+								Ball_Direction_X <= 1;
+								Ball_Direction_Y <= 1;
+							else
+								Ball_Direction_X <= 1;
+								Ball_Direction_Y <= -1;
+							BallCollision <= BallCollision + 1;
+							Sound_counter <= Sound_counter_delay;
+							end if;
+						elsif (Ball_X1+Ball_width >= HD-21) then
+							if (Ball_Direction_Y = -1) then
+								Ball_Direction_X <= -1;
+								Ball_Direction_Y <= -1;
+							else
+								Ball_Direction_X <= -1;
+								Ball_Direction_Y <= 1;
+							BallCollision <= BallCollision + 1;
+							Sound_counter <= Sound_counter_delay;
+							end if;
+						end if;
 					end if;
 					
-				else
-					Ball_Move_counter <= Ball_Move_counter - 1;
-				end if;		
-			else
-				Ball_X1 <= Ball_SpawnPosX;
-				Ball_Y1 <= Ball_SpawnPosY;
+					if(Ball_Move_counter <= 0) then
+						if (Ball_Direction_X = 1)then
+							Ball_X1 <= Ball_X1+1;
+						elsif Ball_Direction_X = -1 then
+							Ball_X1 <= Ball_X1-1;
+						else
+							Ball_X1 <= Ball_X1;
+						end if;
+						if (Ball_Direction_Y = 1)then
+							Ball_Y1 <= Ball_Y1+2;
+						else
+							Ball_Y1 <= Ball_Y1-2;
+						end if;
+						if BallCollision <= 0 then
+							Ball_Move_counter <= Ball_StartMoveCounter;
+						else
+							Ball_Move_counter <= Ball_Move_counter_delay;
+						end if;
 						
-				if rand_type <= 25 then
-					Ball_Direction_X <= -1*Ball_SpawnDirectionX;
+					else
+						Ball_Move_counter <= Ball_Move_counter - 1;
+					end if;		
 				else
-					Ball_Direction_X <= Ball_SpawnDirectionX;
+					Ball_X1 <= Ball_SpawnPosX;
+					Ball_Y1 <= Ball_SpawnPosY;
+							
+					if rand_type <= 25 then
+						Ball_Direction_X <= -1*Ball_SpawnDirectionX;
+					else
+						Ball_Direction_X <= Ball_SpawnDirectionX;
+					end if;
+							
+					if rand_type2 >= 50 then
+						Ball_Direction_Y <= 1*Ball_SpawnDirectionY;
+					else
+						Ball_Direction_Y <= -1*Ball_SpawnDirectionY;
+					end if;
+							
+					Ball_Move_counter <= Ball_StartMoveCounter;
+					BallCollision <= 0;
 				end if;
-						
-				if rand_type2 >= 50 then
-					Ball_Direction_Y <= 1*Ball_SpawnDirectionY;
-				else
-					Ball_Direction_Y <= -1*Ball_SpawnDirectionY;
-				end if;
-						
-				Ball_Move_counter <= Ball_StartMoveCounter;
-				BallCollision <= 0;
+					
 			end if;
-				
 		end if;
+		
 	end process;
 
 	Player1Movement:process(CLK,Player1_Button_L,Player1_Button_R)

@@ -108,18 +108,24 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" into library work
 Parsing entity <vga_driver>.
 Parsing architecture <Behavioral> of entity <vga_driver>.
-WARNING:HDLCompiler:1369 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 182: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 196: Possible infinite loop; process does not have a wait statement
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating entity <vga_driver> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:871 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 71: Using initial value 5 for ball_width since it is never assigned
-WARNING:HDLCompiler:871 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 72: Using initial value 10 for ball_height since it is never assigned
-WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 119: clk25 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 202: clk25 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 345: clk25 should be on the sensitivity list of the process
+WARNING:HDLCompiler:871 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 80: Using initial value 5 for ball_width since it is never assigned
+WARNING:HDLCompiler:871 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 81: Using initial value 10 for ball_height since it is never assigned
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 122: clk25 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 133: clk25 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 216: scorep1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 217: scorep2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 219: gamestart should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 223: gamestart should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 227: gamestart should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 232: clk25 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Xsectorz\ISE\DigitalFinalProject\VGADriver.vhd" Line 382: clk25 should be on the sensitivity list of the process
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -138,12 +144,13 @@ Synthesizing Unit <vga_driver>.
     Found 32-bit register for signal <rand_num>.
     Found 32-bit register for signal <rand_type>.
     Found 32-bit register for signal <rand_type2>.
-    Found 32-bit register for signal <Sound_counter>.
     Found 1-bit register for signal <BUZZER>.
+    Found 32-bit register for signal <Sound_counter>.
     Found 32-bit register for signal <Ball_Direction_Y>.
     Found 32-bit register for signal <Ball_Direction_X>.
     Found 32-bit register for signal <BallCollision>.
-    Found 1-bit register for signal <outputScore1>.
+    Found 4-bit register for signal <scoreP1>.
+    Found 4-bit register for signal <scoreP2>.
     Found 32-bit register for signal <Ball_X1>.
     Found 32-bit register for signal <Ball_Y1>.
     Found 32-bit register for signal <Ball_Move_counter>.
@@ -151,124 +158,126 @@ Synthesizing Unit <vga_driver>.
     Found 32-bit register for signal <P1_Move_counter>.
     Found 32-bit register for signal <P2_X1>.
     Found 32-bit register for signal <P2_Move_counter>.
-    Found 32-bit subtractor for signal <P2_X1[31]_GND_6_o_sub_47_OUT> created at line 215.
-    Found 32-bit subtractor for signal <P1_X1[31]_GND_6_o_sub_72_OUT> created at line 226.
-    Found 32-bit adder for signal <clockCount[31]_GND_6_o_add_0_OUT> created at line 120.
-    Found 32-bit adder for signal <hPos[31]_GND_6_o_add_5_OUT> created at line 136.
-    Found 32-bit adder for signal <vPos[31]_GND_6_o_add_10_OUT> created at line 150.
-    Found 32-bit adder for signal <rand_num[31]_GND_6_o_add_18_OUT> created at line 185.
-    Found 32-bit adder for signal <rand_type[31]_GND_6_o_add_19_OUT> created at line 186.
-    Found 32-bit adder for signal <rand_type2[31]_GND_6_o_add_20_OUT> created at line 187.
-    Found 32-bit adder for signal <n0609> created at line 212.
-    Found 32-bit adder for signal <P2_X1[31]_P2_X1[31]_add_52_OUT> created at line 217.
-    Found 31-bit adder for signal <P2_X1[31]_GND_6_o_add_53_OUT> created at line 217.
-    Found 32-bit adder for signal <n0615> created at line 217.
-    Found 32-bit adder for signal <n0621> created at line 223.
-    Found 32-bit adder for signal <n0627> created at line 223.
-    Found 32-bit adder for signal <Ball_X1[31]_Ball_X1[31]_add_74_OUT> created at line 228.
-    Found 31-bit adder for signal <Ball_X1[31]_GND_6_o_add_75_OUT> created at line 228.
-    Found 32-bit adder for signal <P1_X1[31]_P1_X1[31]_add_77_OUT> created at line 228.
-    Found 31-bit adder for signal <P1_X1[31]_GND_6_o_add_78_OUT> created at line 228.
-    Found 32-bit adder for signal <n0633> created at line 228.
-    Found 32-bit adder for signal <Ball_Y1[31]_GND_6_o_add_86_OUT> created at line 237.
-    Found 32-bit adder for signal <GND_6_o_rand_num[31]_add_90_OUT> created at line 252.
-    Found 32-bit adder for signal <BallCollision[31]_GND_6_o_add_106_OUT> created at line 291.
-    Found 32-bit adder for signal <Ball_X1[31]_GND_6_o_add_141_OUT> created at line 299.
-    Found 32-bit adder for signal <Ball_Y1[31]_GND_6_o_add_147_OUT> created at line 306.
-    Found 32-bit adder for signal <P1_X1[31]_GND_6_o_add_181_OUT> created at line 361.
-    Found 32-bit adder for signal <P2_X1[31]_GND_6_o_add_198_OUT> created at line 382.
-    Found 32-bit subtractor for signal <Sound_counter[31]_GND_6_o_sub_32_OUT<31:0>> created at line 206.
-    Found 32-bit subtractor for signal <Ball_Y1[31]_GND_6_o_sub_64_OUT<31:0>> created at line 223.
-    Found 32-bit subtractor for signal <GND_6_o_rand_num[31]_sub_92_OUT<31:0>> created at line 254.
-    Found 32-bit subtractor for signal <Ball_X1[31]_GND_6_o_sub_144_OUT<31:0>> created at line 301.
-    Found 32-bit subtractor for signal <Ball_Move_counter[31]_GND_6_o_sub_153_OUT<31:0>> created at line 317.
-    Found 32-bit subtractor for signal <P1_X1[31]_GND_6_o_sub_177_OUT<31:0>> created at line 354.
-    Found 32-bit subtractor for signal <P1_Move_counter[31]_GND_6_o_sub_189_OUT<31:0>> created at line 366.
-    Found 32-bit subtractor for signal <P2_X1[31]_GND_6_o_sub_194_OUT<31:0>> created at line 375.
-    Found 32-bit subtractor for signal <P2_Move_counter[31]_GND_6_o_sub_206_OUT<31:0>> created at line 387.
-WARNING:Xst:737 - Found 1-bit latch for signal <gameStart>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit comparator lessequal for signal <n0023> created at line 161
-    Found 32-bit comparator greater for signal <hPos[31]_GND_6_o_LessThan_16_o> created at line 161
-    Found 32-bit comparator lessequal for signal <n0028> created at line 174
-    Found 32-bit comparator greater for signal <vPos[31]_GND_6_o_LessThan_18_o> created at line 174
-    Found 32-bit comparator greater for signal <Sound_counter[31]_GND_6_o_LessThan_31_o> created at line 204
-    Found 32-bit comparator lessequal for signal <n0049> created at line 212
-    Found 32-bit comparator lessequal for signal <n0052> created at line 212
-    Found 32-bit comparator lessequal for signal <n0058> created at line 215
-    Found 32-bit comparator lessequal for signal <n0065> created at line 217
-    Found 32-bit comparator lessequal for signal <n0069> created at line 223
-    Found 32-bit comparator lessequal for signal <n0072> created at line 223
-    Found 32-bit comparator lessequal for signal <n0079> created at line 226
-    Found 32-bit comparator lessequal for signal <n0089> created at line 228
-    Found 32-bit comparator lessequal for signal <n0092> created at line 235
-    Found 32-bit comparator lessequal for signal <n0096> created at line 237
-    Found 32-bit comparator lessequal for signal <n0098> created at line 251
-    Found 32-bit comparator greater for signal <n0103> created at line 274
-    Found 32-bit comparator greater for signal <n0109> created at line 284
-    Found 32-bit comparator greater for signal <n0145> created at line 297
-    Found 32-bit comparator lessequal for signal <n0155> created at line 310
-    Found 32-bit comparator lessequal for signal <n0162> created at line 323
-    Found 32-bit comparator lessequal for signal <n0165> created at line 329
-    Found 32-bit comparator greater for signal <n0185> created at line 349
-    Found 32-bit comparator greater for signal <n0189> created at line 351
-    Found 32-bit comparator greater for signal <n0196> created at line 358
-    Found 32-bit comparator greater for signal <n0208> created at line 370
-    Found 32-bit comparator greater for signal <n0212> created at line 372
-    Found 32-bit comparator greater for signal <n0219> created at line 379
-    Found 32-bit comparator lessequal for signal <n0239> created at line 403
-    Found 32-bit comparator lessequal for signal <n0241> created at line 403
-    Found 32-bit comparator lessequal for signal <n0245> created at line 419
-    Found 32-bit comparator lessequal for signal <n0247> created at line 419
-    Found 32-bit comparator lessequal for signal <n0249> created at line 419
-    Found 32-bit comparator lessequal for signal <n0251> created at line 419
-    Found 32-bit comparator lessequal for signal <n0256> created at line 421
-    Found 32-bit comparator lessequal for signal <n0258> created at line 421
-    Found 32-bit comparator lessequal for signal <n0260> created at line 421
-    Found 32-bit comparator lessequal for signal <n0262> created at line 421
-    Found 32-bit comparator lessequal for signal <n0267> created at line 423
-    Found 32-bit comparator lessequal for signal <n0269> created at line 423
-    Found 32-bit comparator lessequal for signal <n0271> created at line 423
-    Found 32-bit comparator lessequal for signal <n0273> created at line 423
-    Found 32-bit comparator lessequal for signal <n0278> created at line 425
-    Found 32-bit comparator lessequal for signal <n0282> created at line 427
-    Found 32-bit comparator lessequal for signal <n0284> created at line 427
-    Found 32-bit comparator lessequal for signal <n0289> created at line 429
-    Found 32-bit comparator lessequal for signal <n0291> created at line 429
-    Found 32-bit comparator lessequal for signal <n0293> created at line 429
-    Found 32-bit comparator lessequal for signal <n0298> created at line 431
-    Found 32-bit comparator lessequal for signal <n0300> created at line 431
-    Found 32-bit comparator lessequal for signal <n0302> created at line 431
-    Found 32-bit comparator lessequal for signal <n0304> created at line 431
+    Found 1-bit register for signal <gameStart>.
+    Found 32-bit subtractor for signal <P2_X1[31]_GND_6_o_sub_51_OUT> created at line 244.
+    Found 32-bit subtractor for signal <P1_X1[31]_GND_6_o_sub_76_OUT> created at line 255.
+    Found 32-bit adder for signal <clockCount[31]_GND_6_o_add_4_OUT> created at line 134.
+    Found 32-bit adder for signal <hPos[31]_GND_6_o_add_9_OUT> created at line 150.
+    Found 32-bit adder for signal <vPos[31]_GND_6_o_add_14_OUT> created at line 164.
+    Found 32-bit adder for signal <rand_num[31]_GND_6_o_add_22_OUT> created at line 199.
+    Found 32-bit adder for signal <rand_type[31]_GND_6_o_add_23_OUT> created at line 200.
+    Found 32-bit adder for signal <rand_type2[31]_GND_6_o_add_24_OUT> created at line 201.
+    Found 32-bit adder for signal <P2_X1[31]_P2_X1[31]_add_56_OUT> created at line 246.
+    Found 31-bit adder for signal <P2_X1[31]_GND_6_o_add_57_OUT> created at line 246.
+    Found 32-bit adder for signal <n0733> created at line 246.
+    Found 32-bit adder for signal <Ball_X1[31]_Ball_X1[31]_add_78_OUT> created at line 257.
+    Found 31-bit adder for signal <Ball_X1[31]_GND_6_o_add_79_OUT> created at line 257.
+    Found 32-bit adder for signal <P1_X1[31]_P1_X1[31]_add_81_OUT> created at line 257.
+    Found 31-bit adder for signal <P1_X1[31]_GND_6_o_add_82_OUT> created at line 257.
+    Found 32-bit adder for signal <n0747> created at line 257.
+    Found 4-bit adder for signal <scoreP1[3]_GND_6_o_add_92_OUT> created at line 268.
+    Found 4-bit adder for signal <scoreP2[3]_GND_6_o_add_99_OUT> created at line 277.
+    Found 32-bit adder for signal <GND_6_o_rand_num[31]_add_106_OUT> created at line 287.
+    Found 32-bit adder for signal <BallCollision[31]_GND_6_o_add_122_OUT> created at line 326.
+    Found 32-bit adder for signal <Ball_X1[31]_GND_6_o_add_163_OUT> created at line 334.
+    Found 32-bit adder for signal <Ball_Y1[31]_GND_6_o_add_169_OUT> created at line 341.
+    Found 32-bit adder for signal <P1_X1[31]_GND_6_o_add_232_OUT> created at line 398.
+    Found 32-bit adder for signal <P2_X1[31]_GND_6_o_add_249_OUT> created at line 419.
+    Found 32-bit adder for signal <n0741> created at line 456.
+    Found 32-bit adder for signal <n0727> created at line 458.
+    Found 32-bit adder for signal <n0735> created at line 460.
+    Found 32-bit adder for signal <Ball_Y1[31]_GND_6_o_add_283_OUT> created at line 460.
+    Found 32-bit subtractor for signal <Sound_counter[31]_GND_6_o_sub_36_OUT<31:0>> created at line 235.
+    Found 32-bit subtractor for signal <Ball_Y1[31]_GND_6_o_sub_68_OUT<31:0>> created at line 252.
+    Found 32-bit subtractor for signal <GND_6_o_rand_num[31]_sub_108_OUT<31:0>> created at line 289.
+    Found 32-bit subtractor for signal <Ball_X1[31]_GND_6_o_sub_166_OUT<31:0>> created at line 336.
+    Found 32-bit subtractor for signal <Ball_Move_counter[31]_GND_6_o_sub_175_OUT<31:0>> created at line 352.
+    Found 32-bit subtractor for signal <P1_X1[31]_GND_6_o_sub_228_OUT<31:0>> created at line 391.
+    Found 32-bit subtractor for signal <P1_Move_counter[31]_GND_6_o_sub_240_OUT<31:0>> created at line 403.
+    Found 32-bit subtractor for signal <P2_X1[31]_GND_6_o_sub_245_OUT<31:0>> created at line 412.
+    Found 32-bit subtractor for signal <P2_Move_counter[31]_GND_6_o_sub_257_OUT<31:0>> created at line 424.
+    Found 32-bit comparator lessequal for signal <n0024> created at line 175
+    Found 32-bit comparator greater for signal <hPos[31]_GND_6_o_LessThan_20_o> created at line 175
+    Found 32-bit comparator lessequal for signal <n0029> created at line 188
+    Found 32-bit comparator greater for signal <vPos[31]_GND_6_o_LessThan_22_o> created at line 188
+    Found 32-bit comparator greater for signal <Sound_counter[31]_GND_6_o_LessThan_35_o> created at line 233
+    Found 32-bit comparator lessequal for signal <n0056> created at line 241
+    Found 32-bit comparator lessequal for signal <n0058> created at line 241
+    Found 32-bit comparator lessequal for signal <n0064> created at line 244
+    Found 32-bit comparator lessequal for signal <n0071> created at line 246
+    Found 32-bit comparator lessequal for signal <n0074> created at line 252
+    Found 32-bit comparator lessequal for signal <n0076> created at line 252
+    Found 32-bit comparator lessequal for signal <n0083> created at line 255
+    Found 32-bit comparator lessequal for signal <n0093> created at line 257
+    Found 32-bit comparator greater for signal <n0096> created at line 264
+    Found 32-bit comparator greater for signal <n0098> created at line 264
+    Found 32-bit comparator lessequal for signal <n0117> created at line 286
+    Found 32-bit comparator greater for signal <n0122> created at line 309
+    Found 32-bit comparator greater for signal <n0128> created at line 319
+    Found 32-bit comparator greater for signal <n0170> created at line 332
+    Found 32-bit comparator lessequal for signal <n0180> created at line 345
+    Found 32-bit comparator lessequal for signal <n0187> created at line 358
+    Found 32-bit comparator lessequal for signal <n0190> created at line 364
+    Found 32-bit comparator greater for signal <n0249> created at line 386
+    Found 32-bit comparator greater for signal <n0253> created at line 388
+    Found 32-bit comparator greater for signal <n0260> created at line 395
+    Found 32-bit comparator greater for signal <n0272> created at line 407
+    Found 32-bit comparator greater for signal <n0276> created at line 409
+    Found 32-bit comparator greater for signal <n0283> created at line 416
+    Found 32-bit comparator lessequal for signal <n0303> created at line 440
+    Found 32-bit comparator lessequal for signal <n0305> created at line 440
+    Found 32-bit comparator lessequal for signal <n0309> created at line 456
+    Found 32-bit comparator lessequal for signal <n0312> created at line 456
+    Found 32-bit comparator lessequal for signal <n0314> created at line 456
+    Found 32-bit comparator lessequal for signal <n0316> created at line 456
+    Found 32-bit comparator lessequal for signal <n0321> created at line 458
+    Found 32-bit comparator lessequal for signal <n0324> created at line 458
+    Found 32-bit comparator lessequal for signal <n0326> created at line 458
+    Found 32-bit comparator lessequal for signal <n0328> created at line 458
+    Found 32-bit comparator lessequal for signal <n0333> created at line 460
+    Found 32-bit comparator lessequal for signal <n0336> created at line 460
+    Found 32-bit comparator lessequal for signal <n0338> created at line 460
+    Found 32-bit comparator lessequal for signal <n0341> created at line 460
+    Found 32-bit comparator lessequal for signal <n0346> created at line 462
+    Found 32-bit comparator lessequal for signal <n0350> created at line 464
+    Found 32-bit comparator lessequal for signal <n0352> created at line 464
+    Found 32-bit comparator lessequal for signal <n0357> created at line 466
+    Found 32-bit comparator lessequal for signal <n0359> created at line 466
+    Found 32-bit comparator lessequal for signal <n0361> created at line 466
+    Found 32-bit comparator lessequal for signal <n0366> created at line 468
+    Found 32-bit comparator lessequal for signal <n0368> created at line 468
+    Found 32-bit comparator lessequal for signal <n0370> created at line 468
+    Found 32-bit comparator lessequal for signal <n0372> created at line 468
     Summary:
-	inferred  30 Adder/Subtractor(s).
-	inferred 558 D-type flip-flop(s).
-	inferred   1 Latch(s).
+	inferred  32 Adder/Subtractor(s).
+	inferred 566 D-type flip-flop(s).
 	inferred  52 Comparator(s).
-	inferred  33 Multiplexer(s).
+	inferred  39 Multiplexer(s).
 Unit <vga_driver> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 30
+# Adders/Subtractors                                   : 32
  31-bit adder                                          : 3
  32-bit adder                                          : 16
  32-bit addsub                                         : 4
  32-bit subtractor                                     : 7
-# Registers                                            : 24
+ 4-bit adder                                           : 2
+# Registers                                            : 26
  1-bit register                                        : 6
  32-bit register                                       : 17
+ 4-bit register                                        : 2
  8-bit register                                        : 1
-# Latches                                              : 1
- 1-bit latch                                           : 1
 # Comparators                                          : 52
- 32-bit comparator greater                             : 12
- 32-bit comparator lessequal                           : 40
-# Multiplexers                                         : 33
- 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit comparator greater                             : 14
+ 32-bit comparator lessequal                           : 38
+# Multiplexers                                         : 39
+ 1-bit 2-to-1 multiplexer                              : 2
  2-bit 2-to-1 multiplexer                              : 2
  32-bit 2-to-1 multiplexer                             : 23
+ 4-bit 2-to-1 multiplexer                              : 5
  8-bit 2-to-1 multiplexer                              : 7
 # Xors                                                 : 2
  1-bit xor2                                            : 2
@@ -280,7 +289,6 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <BUZZER> (without init value) has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <vga_driver>.
 The following registers are absorbed into counter <hPos>: 1 register on signal <hPos>.
@@ -292,8 +300,8 @@ The following registers are absorbed into counter <Ball_Move_counter>: 1 registe
 The following registers are absorbed into counter <P1_Move_counter>: 1 register on signal <P1_Move_counter>.
 The following registers are absorbed into counter <P2_Move_counter>: 1 register on signal <P2_Move_counter>.
 The following registers are absorbed into counter <BallCollision>: 1 register on signal <BallCollision>.
-The following registers are absorbed into counter <rand_type>: 1 register on signal <rand_type>.
 The following registers are absorbed into counter <rand_type2>: 1 register on signal <rand_type2>.
+The following registers are absorbed into counter <rand_type>: 1 register on signal <rand_type>.
 The following registers are absorbed into counter <rand_num>: 1 register on signal <rand_num>.
 Unit <vga_driver> synthesized (advanced).
 
@@ -301,24 +309,26 @@ Unit <vga_driver> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 18
+# Adders/Subtractors                                   : 20
  31-bit adder                                          : 3
  32-bit adder                                          : 9
  32-bit addsub                                         : 2
  32-bit subtractor                                     : 4
+ 4-bit adder                                           : 2
 # Counters                                             : 12
  32-bit down counter                                   : 3
  32-bit up counter                                     : 7
  32-bit updown counter                                 : 2
-# Registers                                            : 174
- Flip-Flops                                            : 174
+# Registers                                            : 182
+ Flip-Flops                                            : 182
 # Comparators                                          : 52
- 32-bit comparator greater                             : 12
- 32-bit comparator lessequal                           : 40
-# Multiplexers                                         : 28
- 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit comparator greater                             : 14
+ 32-bit comparator lessequal                           : 38
+# Multiplexers                                         : 34
+ 1-bit 2-to-1 multiplexer                              : 2
  2-bit 2-to-1 multiplexer                              : 2
  32-bit 2-to-1 multiplexer                             : 18
+ 4-bit 2-to-1 multiplexer                              : 5
  8-bit 2-to-1 multiplexer                              : 7
 # Xors                                                 : 2
  1-bit xor2                                            : 2
@@ -328,44 +338,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <BUZZER> (without init value) has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <Sound_counter_0> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_1> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_2> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_3> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_4> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_5> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_6> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_7> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_8> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_9> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_10> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_11> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_12> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_13> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_14> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_15> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_16> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_17> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_18> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_19> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_20> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_21> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_22> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_23> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_24> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_25> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_26> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_27> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_28> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_29> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_30> of sequential type is unconnected in block <vga_driver>.
-WARNING:Xst:2677 - Node <Sound_counter_31> of sequential type is unconnected in block <vga_driver>.
 WARNING:Xst:1293 - FF/Latch <Ball_Direction_Y_0> has a constant value of 1 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RGB_0> (without init value) has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <Ball_Direction_X_1> in Unit <vga_driver> is equivalent to the following 30 FFs/Latches, which will be removed : <Ball_Direction_X_2> <Ball_Direction_X_3> <Ball_Direction_X_4> <Ball_Direction_X_5> <Ball_Direction_X_6> <Ball_Direction_X_7> <Ball_Direction_X_8> <Ball_Direction_X_9> <Ball_Direction_X_10> <Ball_Direction_X_11> <Ball_Direction_X_12> <Ball_Direction_X_13> <Ball_Direction_X_14> <Ball_Direction_X_15> <Ball_Direction_X_16> <Ball_Direction_X_17> <Ball_Direction_X_18> <Ball_Direction_X_19> <Ball_Direction_X_20> <Ball_Direction_X_21> <Ball_Direction_X_22> <Ball_Direction_X_23> <Ball_Direction_X_24> <Ball_Direction_X_25> <Ball_Direction_X_26> <Ball_Direction_X_27> <Ball_Direction_X_28> <Ball_Direction_X_29> <Ball_Direction_X_30> <Ball_Direction_X_31> 
 INFO:Xst:2261 - The FF/Latch <Ball_Direction_Y_1> in Unit <vga_driver> is equivalent to the following 30 FFs/Latches, which will be removed : <Ball_Direction_Y_2> <Ball_Direction_Y_3> <Ball_Direction_Y_4> <Ball_Direction_Y_5> <Ball_Direction_Y_6> <Ball_Direction_Y_7> <Ball_Direction_Y_8> <Ball_Direction_Y_9> <Ball_Direction_Y_10> <Ball_Direction_Y_11> <Ball_Direction_Y_12> <Ball_Direction_Y_13> <Ball_Direction_Y_14> <Ball_Direction_Y_15> <Ball_Direction_Y_16> <Ball_Direction_Y_17> <Ball_Direction_Y_18> <Ball_Direction_Y_19> <Ball_Direction_Y_20> <Ball_Direction_Y_21> <Ball_Direction_Y_22> <Ball_Direction_Y_23> <Ball_Direction_Y_24> <Ball_Direction_Y_25> <Ball_Direction_Y_26> <Ball_Direction_Y_27> <Ball_Direction_Y_28> <Ball_Direction_Y_29> <Ball_Direction_Y_30> <Ball_Direction_Y_31> 
 INFO:Xst:2261 - The FF/Latch <RGB_2> in Unit <vga_driver> is equivalent to the following 2 FFs/Latches, which will be removed : <RGB_3> <RGB_4> 
+INFO:Xst:2261 - The FF/Latch <Ball_Direction_X_1> in Unit <vga_driver> is equivalent to the following 30 FFs/Latches, which will be removed : <Ball_Direction_X_2> <Ball_Direction_X_3> <Ball_Direction_X_4> <Ball_Direction_X_5> <Ball_Direction_X_6> <Ball_Direction_X_7> <Ball_Direction_X_8> <Ball_Direction_X_9> <Ball_Direction_X_10> <Ball_Direction_X_11> <Ball_Direction_X_12> <Ball_Direction_X_13> <Ball_Direction_X_14> <Ball_Direction_X_15> <Ball_Direction_X_16> <Ball_Direction_X_17> <Ball_Direction_X_18> <Ball_Direction_X_19> <Ball_Direction_X_20> <Ball_Direction_X_21> <Ball_Direction_X_22> <Ball_Direction_X_23> <Ball_Direction_X_24> <Ball_Direction_X_25> <Ball_Direction_X_26> <Ball_Direction_X_27> <Ball_Direction_X_28> <Ball_Direction_X_29> <Ball_Direction_X_30> <Ball_Direction_X_31> 
 INFO:Xst:2261 - The FF/Latch <RGB_6> in Unit <vga_driver> is equivalent to the following FF/Latch, which will be removed : <RGB_7> 
 WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
    incompatible with the Spartan6 architecture. The two primary causes of this is
@@ -398,29 +375,32 @@ WARNING:Xst:3002 - This design contains one or more registers/latches that are d
 
 
 Optimizing unit <vga_driver> ...
-WARNING:Xst:1293 - FF/Latch <P2_Move_counter_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <P2_Move_counter_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_17> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_16> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_28> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_27> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_29> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_25> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_24> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_28> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_26> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_25> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_27> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_24> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_17> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_16> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_17> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_Move_counter_16> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_29> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_27> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_26> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_28> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_28> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
@@ -432,9 +412,9 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_2
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Move_counter_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_29> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
@@ -444,57 +424,65 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_28>
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_24> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_25> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_Move_counter_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_16> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_15> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_17> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_13> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_12> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_14> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_10> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_9> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_11> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_29> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_28> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_27> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_26> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_25> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_24> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Sound_counter_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Y1_0> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_24> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_25> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_17> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_15> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_14> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_16> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_12> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_11> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_13> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_9> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_10> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_29> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_28> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_27> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_29> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_25> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_24> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_26> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_17> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_16> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_14> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_13> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_15> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_11> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_10> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_12> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_9> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Ball_Y1_0> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_30> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_29> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_28> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_27> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_25> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_24> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_26> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_22> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_21> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_23> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_19> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_18> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_20> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_16> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_15> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_17> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_13> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_12> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_14> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_10> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_9> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P2_X1_11> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <P1_X1_31> has a constant value of 0 in block <vga_driver>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block vga_driver, actual ratio is 35.
+Found area constraint ratio of 100 (+ 5) on block vga_driver, actual ratio is 37.
 WARNING:Xst:1426 - The value init of the FF/Latch videoOn_LD hinder the constant cleaning in the block vga_driver.
    You should achieve better results by setting this init to 0.
 
@@ -504,8 +492,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 368
- Flip-Flops                                            : 368
+# Registers                                            : 398
+ Flip-Flops                                            : 398
 
 =========================================================================
 
@@ -528,34 +516,36 @@ Top Level Output File Name         : vga_driver.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3346
+# BELS                             : 3512
 #      GND                         : 1
-#      INV                         : 116
-#      LUT1                        : 361
-#      LUT2                        : 382
-#      LUT3                        : 59
-#      LUT4                        : 331
-#      LUT5                        : 238
-#      LUT6                        : 93
-#      MUXCY                       : 1106
+#      INV                         : 138
+#      LUT1                        : 362
+#      LUT2                        : 374
+#      LUT3                        : 64
+#      LUT4                        : 376
+#      LUT5                        : 254
+#      LUT6                        : 128
+#      MUXCY                       : 1135
 #      VCC                         : 1
-#      XORCY                       : 658
-# FlipFlops/Latches                : 370
-#      FD                          : 25
+#      XORCY                       : 679
+# FlipFlops/Latches                : 400
+#      FD                          : 63
 #      FDC                         : 39
-#      FDCE                        : 32
+#      FDCE                        : 40
 #      FDE                         : 2
-#      FDR                         : 109
-#      FDRE                        : 113
+#      FDPE                        : 1
+#      FDR                         : 98
+#      FDRE                        : 107
 #      FDS                         : 29
 #      FDSE                        : 19
-#      LD                          : 2
+#      LD                          : 1
+#      LDC                         : 1
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
-# IO Buffers                       : 19
-#      IBUF                        : 7
-#      OBUF                        : 12
+# IO Buffers                       : 29
+#      IBUF                        : 8
+#      OBUF                        : 21
 
 Device utilization summary:
 ---------------------------
@@ -564,20 +554,20 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             370  out of  11440     3%  
- Number of Slice LUTs:                 1580  out of   5720    27%  
-    Number used as Logic:              1580  out of   5720    27%  
+ Number of Slice Registers:             400  out of  11440     3%  
+ Number of Slice LUTs:                 1696  out of   5720    29%  
+    Number used as Logic:              1696  out of   5720    29%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1613
-   Number with an unused Flip Flop:    1243  out of   1613    77%  
-   Number with an unused LUT:            33  out of   1613     2%  
-   Number of fully used LUT-FF pairs:   337  out of   1613    20%  
-   Number of unique control sets:        20
+ Number of LUT Flip Flop pairs used:   1727
+   Number with an unused Flip Flop:    1327  out of   1727    76%  
+   Number with an unused LUT:            31  out of   1727     1%  
+   Number of fully used LUT-FF pairs:   369  out of   1727    21%  
+   Number of unique control sets:        23
 
 IO Utilization: 
- Number of IOs:                          20
- Number of bonded IOBs:                  20  out of    102    19%  
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    102    29%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
@@ -600,14 +590,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 272   |
-clkDiv1M                           | BUFG                   | 96    |
-RST                                | IBUF+BUFG              | 1     |
-gameStart_G(gameStart_G:O)         | NONE(*)(gameStart)     | 1     |
------------------------------------+------------------------+-------+
+-----------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------------+------------------------+-------+
+CLK                                                              | BUFGP                  | 302   |
+clkDiv1M                                                         | BUFG                   | 96    |
+RST                                                              | IBUF+BUFG              | 1     |
+BTN_RESTART_BTN_START_AND_51_o(BTN_RESTART_BTN_START_AND_51_o1:O)| NONE(*)(gameStart_LDC) | 1     |
+-----------------------------------------------------------------+------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -622,9 +612,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 8.839ns (Maximum Frequency: 113.130MHz)
-   Minimum input arrival time before clock: 4.145ns
-   Maximum output required time after clock: 3.668ns
-   Maximum combinational path delay: No path found
+   Minimum input arrival time before clock: 6.109ns
+   Maximum output required time after clock: 5.745ns
+   Maximum combinational path delay: 4.701ns
 
 Timing Details:
 ---------------
@@ -633,7 +623,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 8.839ns (frequency: 113.130MHz)
-  Total number of paths / destination ports: 2086346 / 520
+  Total number of paths / destination ports: 2401517 / 636
 -------------------------------------------------------------------------
 Delay:               8.839ns (Levels of Logic = 34)
   Source:            P1_X1_0 (FF)
@@ -646,40 +636,40 @@ Delay:               8.839ns (Levels of Logic = 34)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             7   0.447   0.773  P1_X1_0 (P1_X1_0)
-     INV:I->O              1   0.206   0.000  Madd_n0627_lut<0>_INV_0 (Madd_n0627_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  Madd_n0627_cy<0> (Madd_n0627_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n0627_cy<1> (Madd_n0627_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n0627_cy<2> (Madd_n0627_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n0627_cy<3> (Madd_n0627_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n0627_cy<4> (Madd_n0627_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_n0627_cy<5> (Madd_n0627_cy<5>)
-     XORCY:CI->O           7   0.180   0.774  Madd_n0627_xor<6> (n0627<6>)
-     LUT2:I1->O            1   0.205   0.000  Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_lut<6> (Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_lut<6>)
-     MUXCY:S->O            1   0.172   0.000  Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<6> (Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<7> (Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<8> (Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<8>)
-     MUXCY:CI->O           0   0.019   0.000  Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<9> (Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_cy<9>)
-     XORCY:CI->O           1   0.180   0.580  Madd_P1_X1[31]_P1_X1[31]_add_77_OUT_xor<10> (P1_X1[31]_P1_X1[31]_add_77_OUT<10>)
-     LUT1:I0->O            1   0.205   0.000  Madd_P1_X1[31]_GND_6_o_add_78_OUT_cy<9>_rt (Madd_P1_X1[31]_GND_6_o_add_78_OUT_cy<9>_rt)
-     MUXCY:S->O            0   0.172   0.000  Madd_P1_X1[31]_GND_6_o_add_78_OUT_cy<9> (Madd_P1_X1[31]_GND_6_o_add_78_OUT_cy<9>)
-     XORCY:CI->O           2   0.180   0.617  Madd_P1_X1[31]_GND_6_o_add_78_OUT_xor<10> (P1_X1[31]_GND_6_o_add_78_OUT<10>)
-     LUT1:I0->O            1   0.205   0.000  Madd_n0633_cy<10>_rt (Madd_n0633_cy<10>_rt)
-     MUXCY:S->O            0   0.172   0.000  Madd_n0633_cy<10> (Madd_n0633_cy<10>)
-     XORCY:CI->O           2   0.180   0.864  Madd_n0633_xor<11> (n0633<11>)
-     LUT4:I0->O            0   0.203   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_lutdi5 (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_lutdi5)
-     MUXCY:DI->O           1   0.145   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<5> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<6> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<7> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<8> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<9> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<10> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<11> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<12> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<13> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<14> (Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<14>)
-     MUXCY:CI->O           1   0.213   0.580  Mcompar_BUS_0040_Ball_X1[31]_LessThan_81_o_cy<15> (BUS_0040_Ball_X1[31]_LessThan_81_o)
-     LUT2:I1->O            1   0.205   0.580  Mmux_GND_6_o_Ball_Direction_X[31]_mux_162_OUT1_SW0 (N30)
-     LUT6:I5->O            1   0.205   0.000  Mmux_GND_6_o_Ball_Direction_X[31]_mux_162_OUT1 (GND_6_o_Ball_Direction_X[31]_mux_162_OUT<0>)
+     INV:I->O              1   0.206   0.000  Madd_n0741_lut<0>_INV_0 (Madd_n0741_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n0741_cy<0> (Madd_n0741_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0741_cy<1> (Madd_n0741_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0741_cy<2> (Madd_n0741_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0741_cy<3> (Madd_n0741_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0741_cy<4> (Madd_n0741_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0741_cy<5> (Madd_n0741_cy<5>)
+     XORCY:CI->O           7   0.180   0.774  Madd_n0741_xor<6> (n0741<6>)
+     LUT2:I1->O            1   0.205   0.000  Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_lut<6> (Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<6> (Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<7> (Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<8> (Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<9> (Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_cy<9>)
+     XORCY:CI->O           1   0.180   0.580  Madd_P1_X1[31]_P1_X1[31]_add_81_OUT_xor<10> (P1_X1[31]_P1_X1[31]_add_81_OUT<10>)
+     LUT1:I0->O            1   0.205   0.000  Madd_P1_X1[31]_GND_6_o_add_82_OUT_cy<9>_rt (Madd_P1_X1[31]_GND_6_o_add_82_OUT_cy<9>_rt)
+     MUXCY:S->O            0   0.172   0.000  Madd_P1_X1[31]_GND_6_o_add_82_OUT_cy<9> (Madd_P1_X1[31]_GND_6_o_add_82_OUT_cy<9>)
+     XORCY:CI->O           2   0.180   0.617  Madd_P1_X1[31]_GND_6_o_add_82_OUT_xor<10> (P1_X1[31]_GND_6_o_add_82_OUT<10>)
+     LUT1:I0->O            1   0.205   0.000  Madd_n0747_cy<10>_rt (Madd_n0747_cy<10>_rt)
+     MUXCY:S->O            0   0.172   0.000  Madd_n0747_cy<10> (Madd_n0747_cy<10>)
+     XORCY:CI->O           2   0.180   0.864  Madd_n0747_xor<11> (n0747<11>)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_lutdi5 (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_lutdi5)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<5> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<6> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<7> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<8> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<9> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<10> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<11> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<12> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<13> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<14> (Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<14>)
+     MUXCY:CI->O           1   0.213   0.580  Mcompar_BUS_0041_Ball_X1[31]_LessThan_85_o_cy<15> (BUS_0041_Ball_X1[31]_LessThan_85_o)
+     LUT2:I1->O            1   0.205   0.580  Mmux_GND_6_o_Ball_Direction_X[31]_mux_184_OUT1_SW0 (N33)
+     LUT6:I5->O            1   0.205   0.000  Mmux_GND_6_o_Ball_Direction_X[31]_mux_184_OUT1 (GND_6_o_Ball_Direction_X[31]_mux_184_OUT<0>)
      FDSE:D                    0.102          Ball_Direction_X_0
     ----------------------------------------
     Total                      8.839ns (4.072ns logic, 4.767ns route)
@@ -701,88 +691,160 @@ Delay:               4.577ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              5   0.447   1.059  rand_type_2 (rand_type_2)
-     LUT6:I1->O            1   0.203   0.944  GND_6_o_rand_type[31]_equal_24_o<31>1 (GND_6_o_rand_type[31]_equal_24_o<31>)
-     LUT6:I0->O           32   0.203   1.291  GND_6_o_rand_type[31]_equal_24_o<31>7 (GND_6_o_rand_type[31]_equal_24_o)
+     LUT6:I1->O            1   0.203   0.944  GND_6_o_rand_type[31]_equal_28_o<31>1 (GND_6_o_rand_type[31]_equal_28_o<31>)
+     LUT6:I0->O           32   0.203   1.291  GND_6_o_rand_type[31]_equal_28_o<31>7 (GND_6_o_rand_type[31]_equal_28_o)
      FDR:R                     0.430          rand_type_0
     ----------------------------------------
     Total                      4.577ns (1.283ns logic, 3.294ns route)
                                        (28.0% logic, 72.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 451 / 157
+Timing constraint: Default period analysis for Clock 'BTN_RESTART_BTN_START_AND_51_o'
+  Clock period: 3.149ns (frequency: 317.594MHz)
+  Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.145ns (Levels of Logic = 3)
-  Source:            Player1_Button_R (PAD)
-  Destination:       P1_Move_counter_6 (FF)
-  Destination Clock: CLK rising
+Delay:               3.149ns (Levels of Logic = 1)
+  Source:            gameStart_LDC (LATCH)
+  Destination:       gameStart_LDC (LATCH)
+  Source Clock:      BTN_RESTART_BTN_START_AND_51_o falling
+  Destination Clock: BTN_RESTART_BTN_START_AND_51_o falling
 
-  Data Path: Player1_Button_R to P1_Move_counter_6
+  Data Path: gameStart_LDC to gameStart_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            13   1.222   1.161  Player1_Button_R_IBUF (Player1_Button_R_IBUF)
-     LUT4:I1->O           16   0.205   1.252  _n0796_inv1 (_n0796_inv)
-     LUT4:I0->O            1   0.203   0.000  P1_Move_counter_6_glue_set (P1_Move_counter_6_glue_set)
-     FD:D                      0.102          P1_Move_counter_6
+     LDC:G->Q             35   0.498   1.439  gameStart_LDC (gameStart_LDC)
+     LUT5:I3->O            1   0.203   0.579  BTN_RESTART_BTN_START_AND_52_o1 (BTN_RESTART_BTN_START_AND_52_o)
+     LDC:CLR                   0.430          gameStart_LDC
     ----------------------------------------
-    Total                      4.145ns (1.732ns logic, 2.413ns route)
-                                       (41.8% logic, 58.2% route)
+    Total                      3.149ns (1.131ns logic, 2.018ns route)
+                                       (35.9% logic, 64.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'gameStart_G'
-  Total number of paths / destination ports: 2 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1329 / 402
 -------------------------------------------------------------------------
-Offset:              2.183ns (Levels of Logic = 2)
-  Source:            BTN_RESTART (PAD)
-  Destination:       gameStart (LATCH)
-  Destination Clock: gameStart_G falling
+Offset:              6.109ns (Levels of Logic = 5)
+  Source:            BTN_START (PAD)
+  Destination:       Ball_Direction_X_1 (FF)
+  Destination Clock: CLK rising
 
-  Data Path: BTN_RESTART to gameStart
+  Data Path: BTN_START to Ball_Direction_X_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.222   0.721  BTN_RESTART_IBUF (BTN_RESTART_IBUF)
-     LUT2:I0->O            1   0.203   0.000  gameStart_D (gameStart_D)
-     LD:D                      0.037          gameStart
+     IBUF:I->O            12   1.222   1.253  BTN_START_IBUF (RESTART_OBUF)
+     LUT5:I0->O            5   0.203   1.059  BTN_RESTART_FORCESTOP_OR_39_o1 (BTN_RESTART_FORCESTOP_OR_39_o)
+     LUT6:I1->O            5   0.203   0.715  _n0989_inv1 (_n0989_inv)
+     LUT4:I3->O            1   0.205   0.944  GND_6_o_Ball_Direction_X[31]_mux_184_OUT<18>_SW0 (N46)
+     LUT6:I0->O            1   0.203   0.000  Ball_Direction_X_1_glue_set (Ball_Direction_X_1_glue_set)
+     FD:D                      0.102          Ball_Direction_X_1
     ----------------------------------------
-    Total                      2.183ns (1.462ns logic, 0.721ns route)
-                                       (67.0% logic, 33.0% route)
+    Total                      6.109ns (2.138ns logic, 3.971ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'BTN_RESTART_BTN_START_AND_51_o'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              3.687ns (Levels of Logic = 2)
+  Source:            BTN_START (PAD)
+  Destination:       gameStart_LDC (LATCH)
+  Destination Clock: BTN_RESTART_BTN_START_AND_51_o falling
+
+  Data Path: BTN_START to gameStart_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   1.253  BTN_START_IBUF (RESTART_OBUF)
+     LUT5:I0->O            1   0.203   0.579  BTN_RESTART_BTN_START_AND_52_o1 (BTN_RESTART_BTN_START_AND_52_o)
+     LDC:CLR                   0.430          gameStart_LDC
+    ----------------------------------------
+    Total                      3.687ns (1.855ns logic, 1.832ns route)
+                                       (50.3% logic, 49.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 10 / 10
+  Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
-Offset:              3.668ns (Levels of Logic = 1)
-  Source:            RGB_2 (FF)
-  Destination:       RGB<4> (PAD)
+Offset:              5.466ns (Levels of Logic = 2)
+  Source:            gameStart_P (FF)
+  Destination:       ISGAMESTART (PAD)
   Source Clock:      CLK rising
 
-  Data Path: RGB_2 to RGB<4>
+  Data Path: gameStart_P to ISGAMESTART
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.447   0.650  RGB_2 (RGB_2)
-     OBUF:I->O                 2.571          RGB_4_OBUF (RGB<4>)
+     FDPE:C->Q            35   0.447   1.335  gameStart_P (gameStart_P)
+     LUT3:I2->O           12   0.205   0.908  gameStart1 (gameStart)
+     OBUF:I->O                 2.571          ISGAMESTART_OBUF (ISGAMESTART)
     ----------------------------------------
-    Total                      3.668ns (3.018ns logic, 0.650ns route)
-                                       (82.3% logic, 17.7% route)
+    Total                      5.466ns (3.223ns logic, 2.243ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'BTN_RESTART_BTN_START_AND_51_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.745ns (Levels of Logic = 2)
+  Source:            gameStart_LDC (LATCH)
+  Destination:       ISGAMESTART (PAD)
+  Source Clock:      BTN_RESTART_BTN_START_AND_51_o falling
+
+  Data Path: gameStart_LDC to ISGAMESTART
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q             35   0.498   1.563  gameStart_LDC (gameStart_LDC)
+     LUT3:I0->O           12   0.205   0.908  gameStart1 (gameStart)
+     OBUF:I->O                 2.571          ISGAMESTART_OBUF (ISGAMESTART)
+    ----------------------------------------
+    Total                      5.745ns (3.274ns logic, 2.471ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.701ns (Levels of Logic = 2)
+  Source:            BTN_START (PAD)
+  Destination:       RESTART (PAD)
+
+  Data Path: BTN_START to RESTART
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.908  BTN_START_IBUF (RESTART_OBUF)
+     OBUF:I->O                 2.571          RESTART_OBUF (RESTART)
+    ----------------------------------------
+    Total                      4.701ns (3.793ns logic, 0.908ns route)
+                                       (80.7% logic, 19.3% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock BTN_RESTART_BTN_START_AND_51_o
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+BTN_RESTART_BTN_START_AND_51_o|         |         |    3.149|         |
+CLK                           |         |         |    3.224|         |
+------------------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock CLK
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK            |    8.839|         |         |         |
-RST            |         |    1.851|         |         |
-clkDiv1M       |    5.498|         |         |         |
-gameStart_G    |         |    5.115|         |         |
----------------+---------+---------+---------+---------+
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+BTN_RESTART_BTN_START_AND_51_o|         |    6.096|         |         |
+CLK                           |    8.839|         |         |         |
+RST                           |         |    1.851|         |         |
+clkDiv1M                      |    5.681|         |         |         |
+------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clkDiv1M
 ---------------+---------+---------+---------+---------+
@@ -800,9 +862,9 @@ Total CPU time to Xst completion: 5.30 secs
  
 --> 
 
-Total memory usage is 4521776 kilobytes
+Total memory usage is 4523000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  138 (   0 filtered)
+Number of warnings :  120 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 
